@@ -16,6 +16,7 @@ namespace NetBarcode
         Code128B,
         Code128C,
         Code39,
+        Code39E,
         Code93,
         EAN13,
         EAN8,
@@ -148,6 +149,24 @@ namespace NetBarcode
         {
             _autoSize = false;
             _data = data;
+            _width = width;
+            _height = height;
+
+            InitializeType();
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Barcode" /> class.
+        /// </summary>
+        /// <param name="data">The data to encode as a barcode.</param>
+        /// <param name="type">The type of barcode. Defaults to Code128</param>
+        /// <param name="width">The width in pixels. Defaults to 300.</param>
+        /// <param name="height">The height in pixels. Defaults to 150.</param>
+        public Barcode(string data, Type type, int width, int height)
+        {
+            _autoSize = false;
+            _data = data;
+            _type = type;
             _width = width;
             _height = height;
 
@@ -361,6 +380,9 @@ namespace NetBarcode
                     break;
                 case Type.Code39:
                     barcode = new Code39(_data);
+                    break;
+                case Type.Code39E:
+                    barcode = new Code39(_data, true);
                     break;
                 case Type.Code93:
                     barcode = new Code93(_data);

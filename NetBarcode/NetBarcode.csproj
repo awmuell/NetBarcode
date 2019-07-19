@@ -1,17 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageProjectUrl>https://github.com/Tagliatti/NetBarcode</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/awmuell/NetBarcode</PackageProjectUrl>
     <PackageTags>barcode</PackageTags>
     <PackageIconUrl>https://i.imgur.com/BhcO3DF.jpg</PackageIconUrl>
-    <PackageLicenseUrl>https://github.com/Tagliatti/NetBarcode/blob/master/LICENSE</PackageLicenseUrl>
-    <RepositoryUrl>https://github.com/Tagliatti/NetBarcode</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/awmuell/NetBarcode/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/awmuell/NetBarcode</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Filipe Tagliatti</Authors>
+    <Authors>Filipe Tagliatti, Andrew Mueller</Authors>
     <Company />
     <Product />
-    <Description>Barcode generation library written in .NET Core compatible with .NET Standard 2.</Description>
-    <Version>1.0.7</Version>
+    <Description>Barcode generation library written in .NET Core compatible with .NET Standard 2. With Code39E and Type/Size method.</Description>
+    <Version>1.0.8</Version>
+    <PackageId>awmuell.NetBarcode</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>bin\Debug\netstandard2.0\NetBarcode.xml</DocumentationFile>
